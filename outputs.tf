@@ -83,3 +83,8 @@ output "this_autoscaling_group_health_check_type" {
 //  value       = "${aws_autoscaling_group.this.target_group_arns}"
 //}
 
+output "this_autoscaling_group_security_groups" {
+ description  = "List of Source Security group IDs"
+ value        = "${aws_launch_configuration.this.*.security_groups}"
+}
+
