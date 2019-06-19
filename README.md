@@ -1,6 +1,7 @@
 # AWS Auto Scaling Group (ASG) Terraform module
 
 Terraform module which creates Auto Scaling resources on AWS.
+Available through the [Terraform registry](https://registry.terraform.io/modules/terraform-aws-modules/autoscaling/aws/)
 
 These types of resources are supported:
 
