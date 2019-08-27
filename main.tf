@@ -18,17 +18,12 @@ resource "aws_launch_configuration" "this" {
   ebs_optimized               = "${var.ebs_optimized}"
   ebs_block_device            = "${var.ebs_block_device}"
   ephemeral_block_device      = "${var.ephemeral_block_device}"
-  root_block_device           = "${aws_ebs_volume.root_block_device.arn}"
+  root_block_device           = "${var.root_block_device}"
 
   lifecycle {
     create_before_destroy = true
   }
 }
-
-resource "aws_ebs_volume" "root_block_device" {
-}
-
-
 
 ####################
 # Autoscaling group
